@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHYEL COHORT-1 Fellows</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Cohort Logo">
+  </header>
+
+  <div class="login-container" id="login-page">
+    <div class="card">
+      <img src="https://avatars.githubusercontent.com/u/92431715?v=4&size=64" class="profile-pic" alt="Fellow Pic">
+      <h1>AHYEL COHORT-1 Login</h1>
+      <p><small>Dummy Login:<br>
+        fellow1 / 12345
+      </small></p>
+      <input type="text" id="username" placeholder="Enter Username" required />
+      <input type="password" id="password" placeholder="Enter Password" required />
+      <button onclick="login()">Login</button>
+      <p id="error" style="color:#ff5252; display:none;">Invalid credentials!</p>
+    </div>
+  </div>
+
+  <div class="dashboard hidden" id="dashboard">
+    <img id="dashboard-pic" src="" class="profile-pic" alt="Fellow Pic">
+    <h2>Welcome, <span id="user-name"></span> 🎉</h2>
+    <div class="grid">
+      <div class="tile" onclick="openSection('announcements')"><b>📌 Announcements</b></div>
+      <div class="tile" onclick="openSection('profile')"><b>👤 Profile</b></div>
+      <div class="tile" onclick="openSection('resources')"><b>📚 Resources</b></div>
+      <div class="tile" onclick="openSection('events')"><b>🗓 Events</b></div>
+      <div class="tile" onclick="openSection('messages')"><b>💬 Messages</b></div>
+      <div class="tile" onclick="openSection('settings')"><b>⚙ Settings</b></div>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="section-page hidden" id="announcements">
+    <h2>📌 Announcements</h2>
+    <div class="section-content">
+      <p>Next cohort meeting scheduled for Friday at 10am. Don’t forget to review your weekly assignments.</p>
+      <ul>
+        <li>Weekly report submission deadline: Thursday</li>
+        <li>Guest lecture on leadership skills next Monday</li>
+        <li>End-of-month fellowship review coming up</li>
+      </ul>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <div class="section-page hidden" id="profile">
+    <h2>👤 Profile</h2>
+    <div class="section-content">
+      <p><b>Name:</b> Kasimu Muhammad</p>
+      <p><b>Email:</b> kasimu@example.com</p>
+      <p><b>Role:</b> Fellow, AHYEL Cohort-1</p>
+      <p><b>Interests:</b> Leadership, Community Development, Innovation</p>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <div class="section-page hidden" id="resources">
+    <h2>📚 Resources</h2>
+    <div class="section-content">
+      <ol>
+        <li>Fellowship Handbook (PDF)</li>
+        <li>Leadership Guidebook (Interactive)</li>
+        <li>Access to shared drive resources</li>
+        <li>Recorded sessions from previous workshops</li>
+      </ol>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <div class="section-page hidden" id="events">
+    <h2>🗓 Events</h2>
+    <div class="section-content">
+      <ul>
+        <li>Workshop: Effective Leadership – Aug 28</li>
+        <li>Networking Meetup – Sept 2</li>
+        <li>Mentorship Session – Sept 5</li>
+        <li>Final Fellowship Showcase – Sept 20</li>
+      </ul>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <div class="section-page hidden" id="messages">
+    <h2>💬 Messages</h2>
+    <div class="section-content">
+      <p><b>New Messages:</b></p>
+      <ul>
+        <li>Coordinator: Please confirm your attendance for the Friday meeting.</li>
+        <li>Fellow John: “Can we collaborate on the group task?”</li>
+        <li>Fellow Sarah: “Sharing some notes from yesterday’s session.”</li>
+      </ul>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <div class="section-page hidden" id="settings">
+    <h2>⚙ Settings</h2>
+    <div class="section-content">
+      <p>Here you can customize your dashboard experience:</p>
+      <ul>
+        <li>Manage notifications (email/SMS)</li>
+        <li>Update password</li>
+        <li>Change profile picture</li>
+        <li>Customize dashboard theme</li>
+      </ul>
+    </div>
+    <button class="back-btn" onclick="backToDashboard()">⬅ Back to Dashboard</button>
+  </div>
+
+  <footer>
+    <p>About Us | Contact | Privacy Policy</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
